@@ -2,6 +2,8 @@
 //
 // The `Formatter` wraps an `io.Writer` and formats text written to it. It enables text indenting
 // and line width wrapping.
+//
+// Additionally, ./cmd/formatter is a command line tool for formatting text.
 package formatter
 
 import (
@@ -26,7 +28,7 @@ func (f *Formatter) Write(b []byte) (int, error) {
 }
 
 func (f *Formatter) format(b []byte) []byte {
-	// lastSpace stores the last location of a spotted space charcter in order to insert a line
+	// lastSpace stores the last location of a spotted space character in order to insert a line
 	// break. A negative value is set to identify that a space was not spotted since the last
 	// inserted line break.
 	lastSpace := -1
