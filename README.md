@@ -10,6 +10,8 @@ formatter is a library for formatting text.
 The `Formatter` wraps an `io.Writer` and formats text written to it. It enables text indenting
 and line width wrapping.
 
+Additionally, [./cmd/formatter](./cmd/formatter) is a command line tool for formatting text.
+
 #### Examples
 
 ```golang
